@@ -1,10 +1,9 @@
 package org.example;
 
-import java.util.Scanner;
-
-public class BinarySearch {
+public class Search {
 
     public int binarySearch(int a[], int target){
+        System.out.println("Binary search");
         int i=0; int j=a.length-1;
 
         while(j>=i){
@@ -21,4 +20,14 @@ public class BinarySearch {
         return -1;
     }
 
+    public int linearSearch(int a[], int target){
+        System.out.println("Linear search");
+        for(int i=0; i<a.length;i++){
+            if(a[i]==target){
+                System.out.println(i);
+                return i;
+            }
+        }
+        return -1;
+    }
 }
