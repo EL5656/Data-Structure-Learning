@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class BinarySearch {
 
-    public int BinarySearch(int a[], int target){
+    public int binarySearch(int a[], int target){
         int i=0; int j=a.length-1;
 
         while(j>=i){

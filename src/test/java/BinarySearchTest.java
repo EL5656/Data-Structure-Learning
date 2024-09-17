@@ -16,7 +16,7 @@ public class BinarySearchTest {
         int expectedIndex = 2;
 
         try {
-            assertEquals(expectedIndex, bs.BinarySearch(array,searchElem));
+            assertEquals(expectedIndex, bs.binarySearch(array,searchElem));
             System.out.println("Test passed for target: " + searchElem);
         } catch (AssertionError e) {
             System.out.println("Test failed for target: " + searchElem + " with message: " + e.getMessage());
@@ -31,7 +31,7 @@ public class BinarySearchTest {
         int[] array = { 5, 14, 22, 30, 31, 38, 41, 44 };
         int target = 100;
         int expectedIndex = -1; // 100 is not in the array
-        int result = bs.BinarySearch(array, target);
+        int result = bs.binarySearch(array, target);
 
         try {
             assertEquals(expectedIndex, result);

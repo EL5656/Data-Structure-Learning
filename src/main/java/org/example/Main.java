@@ -11,7 +11,7 @@ public class Main {
         System.out.print("Enter a number: ");
         int x = sc.nextInt();
 
-        int res = bs.BinarySearch(a, x);
+        int res = bs.binarySearch(a, x);
         if (res == -1)
             System.out.println(
                     "Element is not present in array");
