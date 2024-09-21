@@ -2,34 +2,30 @@ package org.example;
 
 import java.util.Arrays;
 
-public class InsertIndex {
+public class Insertion {
+    public static void main(String[] args) {
+        int num[] = {3,8,6,5,4};
+        int insertIndex = 10;
+        int position = 2;
+        int newArr[] = new int[num.length+1];
 
-    public static int[] insertNewElement(int arr[], int position, int insertIndex){
-        int newArr[] = new int[arr.length+1];
-        int i;
-        for(i=0;i<newArr.length;i++){
+        System.out.println("Initial: "+Arrays.toString(num));
+
+        for(int i=0;i<newArr.length;i++){
             System.out.print(i +" ");
             if(i==position){
                 newArr[i]=insertIndex;
                 System.out.print("Insert index: "+newArr[i]);
             }else if(i<position){
-                newArr[i]=arr[i];
+                newArr[i]=num[i];
                 System.out.print("Element before target position: "+newArr[i]+ "");
             }else if(i>position){//i==3
-                newArr[i]=arr[i-1];//arr[3-1], arr[4-1], arr[5-1]
+                newArr[i]=num[i-1];//num[3-1], num[4-1], num[5-1]
                 System.out.print("Element after target position: "+newArr[i]+ "");
             }
             System.out.println();
-        };
-        return newArr;
-    }
-
-    public static void main(String[] args) {
-        int num[] = {3,8,6,5,4};
-        int index = 10;
-        int pos = 2;
-        num = insertNewElement(num,pos,index);
-        System.out.println("New Array: "+Arrays.toString(num));
+        }
+        System.out.println("Output: "+Arrays.toString(newArr));
 
     }
 }
