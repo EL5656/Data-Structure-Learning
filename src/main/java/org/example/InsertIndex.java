@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class InsertIndex {
 
-    public static int[] printNewArr(int arr[], int position, int insertIndex){
+    public static int[] insertNewElement(int arr[], int position, int insertIndex){
         int newArr[] = new int[arr.length+1];
         int i;
         for(i=0;i<newArr.length;i++){
@@ -28,7 +28,7 @@ public class InsertIndex {
         int num[] = {3,8,6,5,4};
         int index = 10;
         int pos = 2;
-        num = printNewArr(num,pos,index);
+        num = insertNewElement(num,pos,index);
         System.out.println("New Array: "+Arrays.toString(num));
 
     }

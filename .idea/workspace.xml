@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1948e2a4-ec8f-442a-9204-d2d70348aebd" name="Changes" comment="Linear search">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ArrOps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/InsertIndex.java" afterDir="false" />
+    <list default="true" id="1948e2a4-ec8f-442a-9204-d2d70348aebd" name="Changes" comment="Insert Element at Specific Index Output">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Search.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/InsertIndex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/InsertIndex.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,9 +55,22 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.ArrOps">
+  <component name="RunManager" selected="Application.InsertIndex">
     <configuration name="ArrOps" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.ArrOps" />
+      <module name="DataStructure" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InsertIndex" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.InsertIndex" />
       <module name="DataStructure" />
       <extension name="coverage">
         <pattern>
@@ -93,16 +104,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchTest.testBinarySearchFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DataStructure" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SearchTest" />
-      <option name="METHOD_NAME" value="testBinarySearchFound" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SearchTest.testBinarySearchNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DataStructure" />
       <option name="PACKAGE_NAME" value="" />
@@ -115,11 +116,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.InsertIndex" />
         <item itemvalue="Application.ArrOps" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.BinarySearchTest" />
         <item itemvalue="JUnit.BinarySearchTest.testBinarySearchNotFound" />
-        <item itemvalue="JUnit.BinarySearchTest.testBinarySearchFound" />
       </list>
     </recent_temporary>
   </component>
@@ -147,7 +148,21 @@
       <option name="project" value="LOCAL" />
       <updated>1726564645500</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Insert Element at Specific Index">
+      <created>1726899160312</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1726899160312</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Insert Element at Specific Index Output">
+      <created>1726899273663</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1726899273663</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,6 +172,8 @@
     <MESSAGE value="Binary search and test case" />
     <MESSAGE value="change uppercase to lowercase" />
     <MESSAGE value="Linear search" />
-    <option name="LAST_COMMIT_MESSAGE" value="Linear search" />
+    <MESSAGE value="Insert Element at Specific Index" />
+    <MESSAGE value="Insert Element at Specific Index Output" />
+    <option name="LAST_COMMIT_MESSAGE" value="Insert Element at Specific Index Output" />
   </component>
 </project>
