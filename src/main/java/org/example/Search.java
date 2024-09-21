@@ -1,7 +1,6 @@
 package org.example;
 
 public class Search {
-
     public int binarySearch(int a[], int target){
         System.out.println("Binary search");
         int i=0; int j=a.length-1;
