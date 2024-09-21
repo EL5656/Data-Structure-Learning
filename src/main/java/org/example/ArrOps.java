@@ -61,14 +61,15 @@ public class ArrOps {
     }
 }
 /*
-Initial: [3, 8, 6, 5, 4]
 0 Element before target position: 3
 1 Element before target position: 8
 2 Insert index: 10
 3 Element after target position: 6
 4 Element after target position: 5
 5 Element after target position: 4
-Output: [3, 8, 10, 6, 5, 4]
+New Array: [3, 8, 10, 6, 5, 4]
+Index of 6 is 3
+After remove element: [3, 8, 10, 5, 4]
 
 Process finished with exit code 0
  */
