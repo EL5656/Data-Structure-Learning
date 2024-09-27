@@ -70,6 +70,7 @@ public class Order {
         }
     }
 
+    // todo - modify the display
     // Display the current order and total amount
     public void displayOrder() {
         if (orderCount == 0) {
@@ -77,12 +78,12 @@ public class Order {
             return;
         }
 
-        // Print the header with proper alignment
-        System.out.printf("%-5s %-35s %10s%n", "Qty", "Item", "Price");
+        // Adjusted header with wider columns
+        System.out.printf("%-5s %-30s %10s%n", "Qty", "Item", "Price");
 
         double totalOrderAmount = 0; // For calculating total
 
-        for (int i = 0; i < orderCount; i++) {
+        for (int i = 0; i < orderedFood.length; i++) {
             Food item = orderedFood[i];
 
             if (item == null) {
@@ -92,16 +93,14 @@ public class Order {
             int quantity = item.getProdCalMethod().equals("100g") ? item.getGram() : item.getAmount();
             double itemTotal = item.calculateProdPrice(quantity);
 
-            // Print each row with adjusted alignment
-            System.out.printf("%-5d %-35s %10.2f%n", quantity, item.getName(), itemTotal);
+            // Adjust columns for the item name and price
+            System.out.printf("%-5d %-30s %10.2f%n", quantity, item.getName(), itemTotal);
             totalOrderAmount += itemTotal;
         }
 
-        // Print a separator line
-        System.out.println("------------------------------------------");
-
-        // Print the total amount aligned to the right
-        System.out.printf("%-40s %10.2f%n", "Total", totalOrderAmount);
+        // Footer with total amount aligned properly
+        System.out.println("-----------------------------------------------");
+        System.out.printf("%35s %10.2f%n", "Total", totalOrderAmount);
     }
 
     // Edit the quantity of a food item in the order
@@ -169,7 +168,7 @@ public class Order {
                     throw new NumberFormatException(); // Force invalid input for out of range
                 }
             } catch (NumberFormatException e) {
-                System.out.println("[Invalid] Please enter a valid number between 1 and 8.");
+                System.out.println("[Invalid] Please enter a valid number between 1 and 8");
                 continue; // Restart the loop for valid foodId
             }
 
