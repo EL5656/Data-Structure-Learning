@@ -77,19 +77,31 @@ public class Order {
             return;
         }
 
-        System.out.printf("%-20s %10s %10s%n", "Item", "Quantity", "Price");
+        // Print the header with proper alignment
+        System.out.printf("%-5s %-35s %10s%n", "Qty", "Item", "Price");
+
         double totalOrderAmount = 0; // For calculating total
 
         for (int i = 0; i < orderCount; i++) {
             Food item = orderedFood[i];
+
+            if (item == null) {
+                continue; // Skip null entries (i.e., deleted items)
+            }
+
             int quantity = item.getProdCalMethod().equals("100g") ? item.getGram() : item.getAmount();
             double itemTotal = item.calculateProdPrice(quantity);
-            System.out.printf("%-20s %10d %10.2f%n", item.getName(), quantity, itemTotal);
+
+            // Print each row with adjusted alignment
+            System.out.printf("%-5d %-35s %10.2f%n", quantity, item.getName(), itemTotal);
             totalOrderAmount += itemTotal;
         }
 
+        // Print a separator line
         System.out.println("------------------------------------------");
-        System.out.printf("%-20s %10s %10.2f%n", "Total Amount", "", totalOrderAmount);
+
+        // Print the total amount aligned to the right
+        System.out.printf("%-40s %10.2f%n", "Total", totalOrderAmount);
     }
 
     // Edit the quantity of a food item in the order
@@ -120,19 +132,74 @@ public class Order {
         System.out.println("Food item with ID " + foodId + " not found in the order.");
     }
 
+    public boolean deleteOrder(String foodId) {
+        if (orderCount == 0) {
+            System.out.println("No items in the order to delete.");
+            return false;
+        }
+
+        // Loop through the orderedFood array to find the food item to delete
+        for (int i = 0; i < orderCount; i++) {
+            if (orderedFood[i].getProdID().equals(foodId)) {
+                // Adjust the total amount before removing the item
+                totAmount -= orderedFood[i].calculateProdPrice(orderedFood[i].getProdCalMethod().equals("100g") ? orderedFood[i].getGram():orderedFood[i].getAmount());
+                orderedFood[i] = null;  // Mark item as deleted
+                orderCount--; // Reduce order count
+                System.out.println("Food item with ID " + foodId + " has been removed from the order.");
+                return true; // Item found and deleted
+            }
+        }
+
+        System.out.println("Food item with ID " + foodId + " not found in the order.");
+        return false; // Item not found
+    }
+
     public void addFood(Order order, String foodId) {
+        // Create a new Scanner object inside the method
         Scanner sc = new Scanner(System.in);
+
         while (true) {
-            System.out.print("Enter the foodID to add food: ");
-            foodId = sc.nextLine();
+            System.out.print("Enter the foodID to add food (1-8): ");
+            foodId = sc.nextLine().trim(); // Get foodId from user input
+
+            int id;
+            try {
+                id = Integer.parseInt(foodId);
+                if (id < 1 || id > 8) {
+                    throw new NumberFormatException(); // Force invalid input for out of range
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("[Invalid] Please enter a valid number between 1 and 8.");
+                continue; // Restart the loop for valid foodId
+            }
+
+            // If valid, proceed to ask for food amount
             System.out.print("Enter amount of food: ");
-            int foodAmount = sc.nextInt();
+            int foodAmount;
+
+            try {
+                foodAmount = sc.nextInt();
+                sc.nextLine(); // Clear the newline character from the buffer
+            } catch (Exception e) {
+                System.out.println("[Invalid] Please enter a valid number.");
+                sc.nextLine(); // Clear the invalid input
+                continue; // Restart the loop
+            }
+
+            // Add food to order
             order.addFoodToOrder(foodId, foodAmount);
 
+            // Ask if the user wants to add more food
             System.out.print("Do you want to add more food? (y/n): ");
-            String response = sc.next().trim().toLowerCase();
+            String response = sc.nextLine().trim().toLowerCase();
+
+            while (!response.equals("y") && !response.equals("n")) {
+                System.out.print("[Invalid] Please enter 'y' or 'n': ");
+                response = sc.nextLine().trim().toLowerCase();
+            }
+
             if (response.equals("n")) {
-                break;
+                break; // Exit loop if user does not want to add more food
             }
         }
     }
@@ -147,6 +214,7 @@ public class Order {
             System.out.println("Press 0 to quit");
             System.out.println("Press 1 to add item");
             System.out.println("Press 2 to edit order"); // quantity
+            System.out.println("Press 3 to remove order");
             System.out.println("Press 4 to display order");
 
             int res = sc.nextInt();
@@ -161,6 +229,16 @@ public class Order {
                     System.out.print("Enter new quantity: ");
                     int newQuantity = sc.nextInt();
                     order.editOrder(order.foodId, newQuantity);
+                    break;
+                case 3:
+                    System.out.print("Enter the food ID to delete: ");
+                    order.foodId = sc.next();
+                    boolean deleted = order.deleteOrder(order.foodId);
+                    if (deleted) {
+                        System.out.println("Item successfully deleted.");
+                    } else {
+                        System.out.println("Failed to delete item.");
+                    }
                     break;
                 case 4:
                     order.displayOrder();

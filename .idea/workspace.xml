@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1948e2a4-ec8f-442a-9204-d2d70348aebd" name="Changes" comment="Order">
+    <list default="true" id="1948e2a4-ec8f-442a-9204-d2d70348aebd" name="Changes" comment="Edit Order">
       <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LinkedList.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/org/example/student/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/fastfoodrestaurant/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/fastfoodrestaurant/Food.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/fastfoodrestaurant/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/fastfoodrestaurant/Order.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -145,7 +144,7 @@
       <workItem from="1726555216263" duration="4364000" />
       <workItem from="1726972857261" duration="20061000" />
       <workItem from="1727252200718" duration="16447000" />
-      <workItem from="1727343461358" duration="18976000" />
+      <workItem from="1727343461358" duration="25906000" />
     </task>
     <task id="LOCAL-00001" summary="change uppercase to lowercase">
       <created>1726561406369</created>
@@ -203,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1727354333096</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Edit Order">
+      <created>1727435276010</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1727435276010</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,6 +224,7 @@
     <MESSAGE value="ArrOps" />
     <MESSAGE value="ArrOps Output" />
     <MESSAGE value="Order" />
-    <option name="LAST_COMMIT_MESSAGE" value="Order" />
+    <MESSAGE value="Edit Order" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit Order" />
   </component>
 </project>
