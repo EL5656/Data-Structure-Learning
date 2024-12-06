@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1948e2a4-ec8f-442a-9204-d2d70348aebd" name="Changes" comment="Edit Order">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LinkedList.java" afterDir="false" />
+    <list default="true" id="1948e2a4-ec8f-442a-9204-d2d70348aebd" name="Changes" comment="Display to be Modified">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/FindElement.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/org/example/student/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/fastfoodrestaurant/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/fastfoodrestaurant/Order.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,29 +40,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Acer/IdeaProjects/DataStructure",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Application.Order">
-    <configuration name="Food" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.fastfoodrestaurant.Food" />
+}]]></component>
+  <component name="RunManager" selected="Application.FindElement">
+    <configuration name="FindElement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.FindElement" />
       <module name="DataStructure" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.fastfoodrestaurant.*" />
+          <option name="PATTERN" value="org.example.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -71,12 +71,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.LinkedList" />
+    <configuration name="Food" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.fastfoodrestaurant.Food" />
       <module name="DataStructure" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.student.*" />
+          <option name="PATTERN" value="org.example.fastfoodrestaurant.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -125,11 +125,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.FindElement" />
         <item itemvalue="Application.Order" />
         <item itemvalue="Application.Menu" />
         <item itemvalue="Application.Food" />
         <item itemvalue="Application.org.example.student.Main" />
-        <item itemvalue="Application.LinkedList" />
       </list>
     </recent_temporary>
   </component>
@@ -144,7 +144,9 @@
       <workItem from="1726555216263" duration="4364000" />
       <workItem from="1726972857261" duration="20061000" />
       <workItem from="1727252200718" duration="16447000" />
-      <workItem from="1727343461358" duration="25906000" />
+      <workItem from="1727343461358" duration="26706000" />
+      <workItem from="1727501587303" duration="433000" />
+      <workItem from="1733475999285" duration="518000" />
     </task>
     <task id="LOCAL-00001" summary="change uppercase to lowercase">
       <created>1726561406369</created>
@@ -209,7 +211,21 @@
       <option name="project" value="LOCAL" />
       <updated>1727435276010</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Modify Add Order">
+      <created>1727459738726</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1727459738726</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Display to be Modified">
+      <created>1727460009354</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1727460009354</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,6 +241,8 @@
     <MESSAGE value="ArrOps Output" />
     <MESSAGE value="Order" />
     <MESSAGE value="Edit Order" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edit Order" />
+    <MESSAGE value="Modify Add Order" />
+    <MESSAGE value="Display to be Modified" />
+    <option name="LAST_COMMIT_MESSAGE" value="Display to be Modified" />
   </component>
 </project>
