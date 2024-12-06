@@ -19,3 +19,12 @@ public class FindElement {
         System.out.println(secondLarge);
     }
 }
+
+//itr |  num[i]  |  comp | T/F
+//------------------------------
+//  1 |     1    |  2>9  |  F
+//  2 |     2    |  26>9 |  T
+//  3 |     3    | 29>26 |  T
+//  4 |     4    | 22>29 |  F
+//    |          | 22>26 |  F
+
